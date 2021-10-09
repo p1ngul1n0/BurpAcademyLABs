@@ -1,1 +1,1 @@
-# BurpAcademyLABS
+# BurpAcademyLAB
