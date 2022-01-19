@@ -16,7 +16,7 @@
 - [XML external entity (XXE) injection](#xxe-injection)
 
 ## Authentication <a name="authentication"></a>
-## [a](#sumário)
+##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-blue?style=plastic&logo=Acclaim)](#sumário)
 ## Business logic vulnerabilities <a name="business-logic-vulnerabilities"></a>
 ## Clickjacking <a name="clickjacking"></a>
 ## CORS <a name="cors"></a>
