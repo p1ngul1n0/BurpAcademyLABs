@@ -1,0 +1,1 @@
+stockApi=http://localhost/admin/delete?username=carlos

@@ -1,0 +1,23 @@
+POST /cart HTTP/1.1
+Host: acaf1fa61f603f2b80478e05001c00bf.web-security-academy.net
+Cookie: session=NO3knLj5UX8biB7g1GOLqtYsIq1vDoBo
+Content-Length: 44
+Cache-Control: max-age=0
+Sec-Ch-Ua: ";Not A Brand";v="99", "Chromium";v="94"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+Origin: https://acaf1fa61f603f2b80478e05001c00bf.web-security-academy.net
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://acaf1fa61f603f2b80478e05001c00bf.web-security-academy.net/product?productId=1
+Accept-Encoding: gzip, deflate
+Accept-Language: en,pt-BR;q=0.9,pt;q=0.8,en-US;q=0.7
+Connection: close
+
+productId=1&redir=PRODUCT&quantity=1&price=1

