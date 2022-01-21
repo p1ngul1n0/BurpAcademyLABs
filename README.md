@@ -45,10 +45,10 @@ Este LAB expõe informação sensível através do seu histórico de controle de
 3. Verifique o conteúdo do arquivo `COMMIT_EDITMSG`, é possível identificar uma frase que indica que a senha do administrador estava fixa no código.
 > Remove admin password from config
 4. Realize download dos arquivos presentes na pasta `objects`.
-5. Utilizando Python é possível ler o conteúdo dos objetos GIT baixados. [Código](https://github.com/sampzzz/BurpAcademyLABs/blob/83fca3be10b16b7c9f05907d89735aa332e6b7ae/Information%20disclosure/Information%20disclosure%20in%20version%20control%20history/exploit.py) 
+5. Utilizando Python é possível ler o conteúdo dos objetos GIT baixados ([Código](https://github.com/sampzzz/BurpAcademyLABs/blob/83fca3be10b16b7c9f05907d89735aa332e6b7ae/Information%20disclosure/Information%20disclosure%20in%20version%20control%20history/exploit.py)).
 6. O programa python irá retornar a linha de código que expõe a senha do administrador: 
 > 'b'blob 36\x00ADMIN_PASSWORD=322ix05781cxs4gp4nvn\n'
-7. Para solucionar o LAB, autentique-se com o usuário `administrator` utilizando a senha obtida e delete o usuário `carlos`
+7. Para solucionar o LAB, autentique-se com o usuário `administrator` utilizando a senha obtida e delete o usuário `carlos`.
 </details>
 
 ### Links Utéis
