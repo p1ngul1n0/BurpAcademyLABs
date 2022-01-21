@@ -30,6 +30,30 @@
 ## File upload vulnerabilities <a name="file-upload-vulnerabilities"></a>
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
 ## Information disclosure <a name="information-disclosure"></a>
+
+### Information disclosure in version control history
+
+#### Descrição
+Este LAB expõe informação sensível através do seu histórico de controle de versão. Para resolver este LAB, obtenha a senha do usuário administrador, realize login e delete a conta de Carlos.
+
+### Solução
+<details>
+  
+<summary>:bulb:</summary>
+
+1. Realize o mapeamento da URL do LAB, o diretório `./git` será identificado.
+3. Verifique o conteúdo do arquivo `COMMIT_EDITMSG`, é possível identificar uma frase que indica que a senha do administrador estava fixa no código.
+> Remove admin password from config
+4. Realize download dos arquivos presentes na pasta `objects`.
+5. Utilizando Python é possível ler o conteúdo dos objetos GIT baixados. [Código](https://github.com/sampzzz/BurpAcademyLABs/blob/83fca3be10b16b7c9f05907d89735aa332e6b7ae/Information%20disclosure/Information%20disclosure%20in%20version%20control%20history/exploit.py) 
+6. O programa python irá retornar a linha de código que expõe a senha do administrador: 
+> 'b'blob 36\x00ADMIN_PASSWORD=322ix05781cxs4gp4nvn\n'
+7. Para solucionar o LAB, autentique-se com o usuário `administrator` utilizando a senha obtida e delete o usuário `carlos`
+</details>
+
+### Links Utéis
+* https://matthew-brett.github.io/curious-git/reading_git_objects.html
+
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
 ## OAuth authentication <a name="oauth-authentication"></a>
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
