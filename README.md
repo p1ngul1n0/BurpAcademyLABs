@@ -55,9 +55,6 @@ As mensagens de erro detalhadas deste LAB expõem que a aplicação está usando
 6. Para solucionar o LAB, submeta a versão identificada.
 </details>
 
-### Links Utéis
-* https://matthew-brett.github.io/curious-git/reading_git_objects.html
-
 ### Information disclosure on debug page
 
 #### Descrição
@@ -73,6 +70,33 @@ Este LAB contém uma página de debug que expõe informação sensível da aplic
 2. Acesse a página presente no comentário, no caso `/cgi-bin/phpinfo.php`.
 3. Na página acessada é possível visualizar a variável de ambiente `SECRET_KEY`.
 4. Para solucionar o LAB, submeta o valor da variável encontrada.
+</details>
+
+### Source code disclosure via backup files
+
+#### Descrição
+Este LAB vaza seu código fonte através de arquivos de backup que estão em um diretório escondido. Para solucionar o LAB, identifique e envie a senha do banco de dados, que esta fixa e exposta no código.
+
+### Solução
+<details>
+  
+<summary>:bulb:</summary>
+
+1. Enumerando os diretórios da aplicação, é possível identificar o diretório `backup`.
+2. Acesse o diretório descoberto, onde é possível visualizar o arquivo `ProductTemplate.java.bak`.
+3. Acesse o arquivo identificado.
+4. No código, é possível identificar os dados de conexão do banco de dados, sendo possível obter a senha de acesso.
+```java
+    ConnectionBuilder connectionBuilder = ConnectionBuilder.from(
+                "org.postgresql.Driver",
+                "postgresql",
+                "localhost",
+                5432,
+                "postgres",
+                "postgres",
+                "kw9ce735cw5r1r1syf3cxkx0dar4zp29"
+```
+5. Para solucionar o LAB, submeta a senha do banco de dados.
 </details>
 
 ### Information disclosure in version control history
