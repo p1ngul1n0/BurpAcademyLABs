@@ -31,6 +31,33 @@
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
 ## Information disclosure <a name="information-disclosure"></a>
 
+### Information disclosure in error messages
+
+#### Descrição
+As mensagens de erro detalhadas deste LAB expõem que a aplicação está usando uma versão vulnerável de um framework de terceiros. Para solucionar o LAB, obtenha e envie o número da versão deste framework.
+
+### Solução
+<details>
+  
+<summary>:bulb:</summary>
+
+1. Acesse os detalhes de qualquer produto do catálogo.
+2. Uma chamada GET com o parâmetro `productId` é realizada:
+> GET /product?productId=2
+3. Substitua o parâmetro por um caractere especial qualquer:
+> GET /product?productId='
+4. Reenvie a chamada com o parâmetro alterado.
+5. Uma mensagem de erro detalhada será recebida, observando a última linha da mensagem, é possível identificar a versão do Apache Struts utilizada.
+> 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+>	  at java.base/java.lang.Thread.run(Thread.java:833)
+>
+>   Apache Struts 2 2.3.31
+6. Para solucionar o LAB, submeta a versão identificada.
+</details>
+
+### Links Utéis
+* https://matthew-brett.github.io/curious-git/reading_git_objects.html
+
 ### Information disclosure on debug page
 
 #### Descrição
@@ -47,9 +74,6 @@ Este LAB contém uma página de debug que expõe informação sensível da aplic
 3. Na página acessada é possível visualizar a variável de ambiente `SECRET_KEY`.
 4. Para solucionar o LAB, submeta o valor da variável encontrada.
 </details>
-
-### Links Utéis
-* https://matthew-brett.github.io/curious-git/reading_git_objects.html
 
 ### Information disclosure in version control history
 
