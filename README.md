@@ -51,7 +51,7 @@ As mensagens de erro detalhadas deste LAB expõem que a aplicação está usando
 > 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 >	  at java.base/java.lang.Thread.run(Thread.java:833)
 >
->   Apache Struts 2 2.3.31
+>  Apache Struts 2 2.3.31
 6. Para solucionar o LAB, submeta a versão identificada.
 </details>
 
