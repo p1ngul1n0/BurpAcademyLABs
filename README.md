@@ -34,7 +34,7 @@
 ### Information disclosure in error messages
 
 #### Descrição
-As mensagens de erro detalhadas deste LAB expõem que a aplicação está usando uma versão vulnerável de um framework de terceiros. Para solucionar o LAB, obtenha e envie o número da versão deste framework.
+Este LAB possui mensagens de erro detalhadas que expõem o uso de uma versão vulnerável de um framework de terceiros. Para solucionar o LAB, obtenha e envie o número da versão deste framework.
 
 ### Solução
 <details>
