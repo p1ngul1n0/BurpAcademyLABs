@@ -31,7 +31,9 @@
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 
 ## Information disclosure <a name="information-disclosure"></a> ![](https://img.shields.io/badge/5%2F5-COMPLETED-orange)
-
+<details>
+  <summary>Visualizar LABs</summary>
+  
 ### Information disclosure in error messages
 
 #### Descrição
@@ -147,6 +149,7 @@ Este LAB expõe informação sensível através do seu histórico de controle de
 
 ### Links Utéis
 * https://matthew-brett.github.io/curious-git/reading_git_objects.html
+</details>
 
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
 ## OAuth authentication <a name="oauth-authentication"></a>
