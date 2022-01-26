@@ -8,7 +8,7 @@
 - [Cross-Site-Scripting](#cross-site-scripting)
 - [CSRF](#csrf)
 - [File upload vulnerabilities](#file-upload-vulnerabilities)
-- [Information disclosure](#information-disclosure)
+- [Information disclosure](#information-disclosure) 
 - [OAuth authentication](#oauth-authentication)
 - [Server-side request forgery (SSRF)](#server-side-request-forgery)
 - [SQL injection](#sql-injection)
@@ -16,20 +16,21 @@
 - [XML external entity (XXE) injection](#xxe-injection)
 
 ## Authentication <a name="authentication"></a>
-##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
+##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 ## Business logic vulnerabilities <a name="business-logic-vulnerabilities"></a>
-##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
+##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 ## Clickjacking <a name="clickjacking"></a>
-##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
+##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 ## CORS <a name="cors"></a>
-##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
+##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 ## Cross-Site-Scripting <a name="cross-site-scripting"></a>
-##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
+##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 ## CSRF <a name="csrf"></a>
-##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
+##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 ## File upload vulnerabilities <a name="file-upload-vulnerabilities"></a>
-##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange?style=plastic&logo=Acclaim)](#sumário)
-## Information disclosure <a name="information-disclosure"></a>
+##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
+
+## Information disclosure <a name="information-disclosure"></a> ![](https://img.shields.io/badge/5%2F5-COMPLETED-orange)
 
 ### Information disclosure in error messages
 
@@ -97,6 +98,31 @@ Este LAB vaza seu código fonte através de arquivos de backup que estão em um 
                 "kw9ce735cw5r1r1syf3cxkx0dar4zp29"
 ```
 5. Para solucionar o LAB, submeta a senha do banco de dados.
+</details>
+
+### Authentication bypass via information disclosure
+
+#### Descrição
+A interface administrativa deste LAB tem uma vulnerabilidade de bypass na autenticação, porém é impraticável explorar sem conhecimento do cabeçalho HTTP customizado utilizado pelo front-end.
+
+Para solucionar o LAB, obtenha o cabeçalho e utilize-o para bypassar a autenticação. Acesse o painel administrativo e delete a conta do Carlos.
+
+### Solução
+<details>
+  
+<summary>:bulb:</summary>
+
+1. Autentique utilizando o usuário e senha `wiener:peter`.
+2. Envie uma requisição com método HTTP TRACE para o endpoint `/admin`.
+3. Observando a resposta é possível identificar o cabeçalho `X-Custom-IP-Authorization: 189.54.133.189`.
+4. Envie outra requisição para o endpoint `/admin` mas desta vez com método GET e o cabeçalho obtido anteriormente com o IP `127.0.0.1`.
+5. A chamada ficará desta forma e sua resposta apresentará o painel administrativo
+```
+GET /admin HTTP/1.1 
+[...]
+X-Custom-IP-Authorization: 127.0.0.1  
+```
+6. Para solucionar o LAB, delete o usuário de Carlos.
 </details>
 
 ### Information disclosure in version control history
