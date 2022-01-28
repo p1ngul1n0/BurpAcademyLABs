@@ -1,7 +1,7 @@
 # Laboratórios da Burp Academy
 <p style="text-align:center" align="center">
 <img src="https://user-images.githubusercontent.com/17954762/47567241-4b4f2080-d92e-11e8-830c-b5db21beab69.png" width="10%" /><br>
-<p align="center">[EM CONSTRUÇÃO]:hammer:</center></p>****
+<p align="center">[EM CONSTRUÇÃO]:hammer:</center></p>
 </p>
 Descrição e solução de LABs da Burp Academy.
 
