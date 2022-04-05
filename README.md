@@ -26,7 +26,35 @@ Descrição e solução de LABs da Burp Academy.
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 ## Clickjacking <a name="clickjacking"></a>
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
-## CORS <a name="cors"></a>
+## CORS <a name="cors"></a> ![](https://img.shields.io/badge/3%2F5-COMPLETED-orange)
+<details>
+  <summary>Visualizar LABs</summary>
+  
+### CORS vulnerability with basic origin reflection
+
+#### Descrição
+Este LAB possui mensagens de erro detalhadas que expõem o uso de uma versão vulnerável de um framework de terceiros. Para solucionar o LAB, obtenha e envie o número da versão deste framework.
+
+### Solução
+<details>
+  
+<summary>:bulb:</summary>
+
+1. Acesse os detalhes de qualquer produto do catálogo.
+2. Uma chamada GET com o parâmetro `productId` é realizada:
+> GET /product?productId=2
+3. Substitua o parâmetro por um caractere especial qualquer:
+> GET /product?productId='
+4. Reenvie a chamada com o parâmetro alterado.
+5. Uma mensagem de erro detalhada será recebida, observando a última linha da mensagem, é possível identificar a versão do Apache Struts utilizada.
+> 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+>	  at java.base/java.lang.Thread.run(Thread.java:833)
+>
+>  Apache Struts 2 2.3.31
+6. Para solucionar o LAB, submeta a versão identificada.
+</details>
+</details>
+
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 ## Cross-Site-Scripting <a name="cross-site-scripting"></a>
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
