@@ -26,7 +26,7 @@ Descrição e solução de LABs da Burp Academy.
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
 ## Clickjacking <a name="clickjacking"></a>
 ##### [![](https://img.shields.io/badge/Voltar-Sum%C3%A1rio-orange)](#sumário)
-## CORS <a name="cors"></a> ![](https://img.shields.io/badge/3%2F5-COMPLETED-orange)
+## CORS <a name="cors"></a> ![](https://img.shields.io/badge/1%2F5-COMPLETED-orange)
 <details>
   <summary>Visualizar LABs</summary>
   
